@@ -1,0 +1,114 @@
+﻿@model IEnumerable<ControleVendas.Models.Funcionario>
+
+@{
+    ViewData["Title"] = "Listar Funcionários";
+}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title text-center">@ViewData["Title"]</h1>
+                    <p class="card-text text-center">Tabela de Funcionários</p>
+                    <div class="table-container">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>CPF</th>
+                                        <th>Idade</th>
+                                        <th>Sexo</th>
+                                        <th>Endereço</th>
+                                        <th>Estado</th>
+                                        <th>Município</th>
+                                        <th>Número</th>
+                                        <th>Complemento</th>
+                                        <th>Escolaridade</th>
+                                        <th>Telefone</th>
+                                        <th>Email</th>
+                                        <th>Total de Vendas</th>
+                                        <th>Opções</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.CPF)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Idade)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Sexo)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Endereço)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Estado)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Municipio)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Numero)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Complemento)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Escolaridade)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Telefone)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.TotalVendas)</td>
+                                            <td>
+                                                <a asp-action="Edit" asp-route-id="@item.FuncionarioId" class="btn btn-primary btn-sm">Edit</a>
+                                                <a asp-action="Details" asp-route-id="@item.FuncionarioId" class="btn btn-info btn-sm">Details</a>
+                                                <a asp-action="Delete" asp-route-id="@item.FuncionarioId" class="btn btn-danger btn-sm">Delete</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="spacer"></tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <a asp-action="Create" class="btn btn-primary">Cadastrar Novo Funcionário</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .table-container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+        .table-container .btn {
+            width: 100px;
+            margin-right: 10px;
+        }
+
+    .spacer {
+        height: 10px;
+    }
+
+    tbody tr.clicked {
+        background-color: #f0f0f0;
+    }
+
+    tbody tr:hover {
+        background-color: #f5f5f5;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var rows = document.querySelectorAll("tbody tr");
+        rows.forEach(function (row) {
+            row.addEventListener("click", function () {
+
+                rows.forEach(function (r) {
+                    r.classList.remove("clicked");
+                });
+
+                this.classList.add("clicked");
+            });
+        });
+    });
+</script>

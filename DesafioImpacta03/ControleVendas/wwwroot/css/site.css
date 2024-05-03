@@ -1,0 +1,110 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#Imagem-Create {
+    position: relative;
+    margin-left: 240px;
+    width: 80%;
+    margin-top: 0px;
+    height: 219px;
+    max-width: 100% !important;
+   
+    border: 5px solid transparent;
+    background-color: burlywood;
+    
+}
+
+
+
+#Imagem-Create2 {
+    position: relative;
+    width: 11%;
+    margin-top: -212px;
+    height: 73px;
+    max-width: 100% !important;
+    right: -38px;
+    border: 5px solid transparent;
+    background-color: gainsboro;
+}
+
+#Imagem-Create3 {
+    position: relative;
+    width: 69%;
+    height: 48px;
+    max-width: 100% !important;
+    right: 10%;
+}
+
+ #botaoImagem3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8%;
+    height: 48px;
+    max-width: 100% !important;
+}
+#botaoImagem4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8%;
+    height: 48px;
+    max-width: 100% !important;
+}
+
+#meumodo {
+    margin-top: -8px !important
+}
+
+#buttonToggle{
+    right: 10px !important
+}
+
+#caixaImagem {
+    background-color: darkgray;
+    height: 10%;
+    border: 2px solid transparent;
+    background-color: #f2f2f2;
+    margin-bottom:49px
+}
+
+#cardEndereco {
+    margin-top: 35% !important;
+    width: 80%;
+    right: -69% !important;
+    position: relative
+}
+
+#cardPessoal {
+    margin-top: 20% !important;
+    width: 100%;
+    right: -20% !important;
+    position: relative
+}
+
+#DivContatos {
+    margin-top: -159% !important;
+    right: -310% !important;
+    position:relative
+     
+}
