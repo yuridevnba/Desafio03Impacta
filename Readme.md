@@ -23,7 +23,7 @@
  <h3>Observações</h3>
  🖥️
   <h5>O login de admin é email:"admin@gmail.com" e senha:123 já pré cadastrado no bd</h5>
-   <h5>`Para fazer login em funcionário que o adm cadastre antes.</h5>
+   <h5>Para fazer login em funcionário é preciso que o adm cadastre antes o funcionário.</h5>
     <h5>`Para o funcionário cadastrar vendas é preciso que o produto já esteja cadastrado pelo ADM</h5>
  <hr/>
  <hr/>
