@@ -9,8 +9,8 @@
 </header>
 <body>
 <label>Comandos para Rodar o Projetinho</label>
- <strong>Add-Migration Initial</strong>
-  <strong>update-database</strong>
+ <h5>Add-Migration Initial</h5>
+  <h5>update-database</h5>
 	
  <hr/>
  <hr/>
@@ -22,9 +22,9 @@
 
  <h3>Observações</h3>
  🖥️
-  <strong>O login de admin é email:"admin@gmail.com" e senha:123 já pré cadastrado no bd</strong>
-   <strong>`Para fazer login em funcionário que o adm cadastre antes.</strong>
-    <strong>`Para o funcionário cadastrar vendas é preciso que o produto já esteja cadastrado pelo ADM</strong>
+  <h5>O login de admin é email:"admin@gmail.com" e senha:123 já pré cadastrado no bd</h5>
+   <h5>`Para fazer login em funcionário que o adm cadastre antes.</h5>
+    <h5>`Para o funcionário cadastrar vendas é preciso que o produto já esteja cadastrado pelo ADM</h5>
  <hr/>
  <hr/>
  <h5>
