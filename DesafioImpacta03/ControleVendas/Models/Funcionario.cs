@@ -31,10 +31,11 @@ namespace ControleVendas.Models
 
         public string? Escolaridade { get; set; }
 
-        public int Telefone { get; set; }
+        public string? Telefone { get; set; }
+
 
         public string? Email { get; set; }
-        public int TotalVendas { get; set; }
+        public decimal TotalVendas { get; set; }
 
 
 

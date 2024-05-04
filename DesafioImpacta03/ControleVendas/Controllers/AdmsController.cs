@@ -19,6 +19,21 @@ namespace ControleVendas.Controllers
             _context = context;
         }
 
+        public IActionResult Modal()
+        {
+           
+
+            return View();
+        }
+
+        public IActionResult Escolha()
+        {
+
+
+            return View();
+        }
+
+
         public IActionResult Index()
         {
             return View();
@@ -26,41 +41,44 @@ namespace ControleVendas.Controllers
 
         [HttpPost]
        [ValidateAntiForgeryToken]
-        public async Task<string> Confirmed(string email, string senha)
+        public async Task<IActionResult> Confirmed(string email, string senha)
         {
-           var adm = await _context.Adm.FirstOrDefaultAsync(a => a.Email == email && a.Senha == senha);
+            //var adm = await _context.Adm.FirstOrDefaultAsync(a => a.Email == email && a.Senha == senha);
 
-           if (adm != null)
+            string emaill = "admin@gmail.com";
+            string senhaa = "123";
+
+           if (email == emaill && senha == senhaa)
            {
-                return "<h1>oioioo</h1>";
+                return RedirectToAction(nameof(Escolha));
             }
            else
            {
-               return "<h1>caralhodeuruim</h1>";
+                return RedirectToAction(nameof(Modal));
             }
         }
 
         
 
-        [HttpGet()]
-        public IActionResult Cadastrar()
-        {
-            return View();
-        }
+        //[HttpGet()]
+        //public IActionResult Cadastrar()
+        //{
+        //    return View();
+        //}
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
        
-        public async Task<IActionResult> Cadastrar([Bind("AdmId,Email,Senha")] Adm funcionario)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(funcionario);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(funcionario);
-        }
+        //public async Task<IActionResult> Cadastrar([Bind("AdmId,Email,Senha")] Adm funcionario)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        _context.Add(funcionario);
+        //        await _context.SaveChangesAsync();
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(funcionario);
+        //}
 
     }
 }

@@ -1,53 +1,78 @@
 ﻿@model IEnumerable<ControleVendas.Models.Produto>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Listar Produtos";
 }
 
-<h1>Index</h1>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title text-center">@ViewData["Title"]</h1>
+                    <p class="card-text text-center">Tabela de Produtos</p>
+                    <div class="table-container">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Preço</th>
+                                        <th>Quantidade</th>
+                                        <th>Hora de Criação</th>
+                                        <th>Opções</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Preco)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.quantidade)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.HoraCriacao)</td>
+                                            <td>
+                                                <a asp-action="Edit" asp-route-id="@item.ProdutoID" class="btn btn-primary btn-sm">Editar</a>
+                                                <a asp-action="Details" asp-route-id="@item.ProdutoID" class="btn btn-info btn-sm">Detalhes</a>
+                                                <a asp-action="Delete" asp-route-id="@item.ProdutoID" class="btn btn-danger btn-sm">Excluir</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="spacer"></tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <a asp-action="Create" class="btn btn-primary">Adicionar Novo Produto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Preco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.quantidade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoraCriacao)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Preco)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.quantidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoraCriacao)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ProdutoID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ProdutoID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ProdutoID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<style>
+    .table-container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+        .table-container .btn {
+            width: 100px;
+            margin-right: 10px;
+        }
+
+    .spacer {
+        height: 10px;
+    }
+
+    tbody tr.clicked {
+        background-color: #f0f0f0;
+    }
+
+    tbody tr:hover {
+        background-color: #f5f5f5;
+        cursor: pointer;
+    }
+</style>

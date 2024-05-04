@@ -7,16 +7,18 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ControleVendas.Data;
 using ControleVendas.Models;
-
+using Microsoft.AspNetCore.Http;
 namespace ControleVendas.Controllers
 {
     public class FuncionariosController : Controller
     {
         private readonly ControleVendasContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public FuncionariosController(ControleVendasContext context)
+        public FuncionariosController(ControleVendasContext context, IHttpContextAccessor httpContext)
         {
             _context = context;
+            _httpContextAccessor = httpContext;
         }
 
         // GET: Funcionarios
@@ -153,5 +155,45 @@ namespace ControleVendas.Controllers
         {
             return _context.Funcionario.Any(e => e.FuncionarioId == id);
         }
+
+        public IActionResult Login()
+        {
+
+
+            return View();
+        }
+
+        public IActionResult Modal()
+        {
+
+
+            return View();
+        }
+
+        public IActionResult Escolha()
+        {
+
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Confirmed(string email, string cpf )
+        {
+            var func = await _context.Funcionario.FirstOrDefaultAsync(a => a.Email == email && a.CPF == cpf);
+
+            if (func != null)
+            {
+                _httpContextAccessor.HttpContext.Session.SetInt32("FuncionarioId", func.FuncionarioId);
+
+                return RedirectToAction("Index", "Vendas");
+            }
+            else
+            {
+                return RedirectToAction(nameof(Modal));
+            }
+        }
+        
     }
 }

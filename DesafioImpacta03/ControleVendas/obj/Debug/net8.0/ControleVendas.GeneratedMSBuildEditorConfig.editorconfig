@@ -30,8 +30,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtc1xDYWRhc3RyYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/Adms/Escolha.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtc1xFc2NvbGhhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/Adms/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/Adms/Modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtc1xNb2RhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/Funcionarios/Create.cshtml]
@@ -52,6 +60,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/Funcionarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/Funcionarios/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9zXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/Funcionarios/Modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9zXE1vZGFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/Home/Index.cshtml]
@@ -88,6 +104,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/Vendas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/Vendas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/Vendas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/Vendas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/Vendas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/Vendas/Modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFzXE1vZGFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/y.henrique.da.silva/source/repos/DesafioImpacta03/ControleVendas/Views/_ViewImports.cshtml]

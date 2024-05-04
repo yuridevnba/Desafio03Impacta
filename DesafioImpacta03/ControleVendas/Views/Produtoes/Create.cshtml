@@ -4,45 +4,77 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            
+                <a class="nav-link" asp-area="" asp-controller="Adms" asp-action="Index">Login</a>
+            
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Funcionarios" asp-action="Index">Funcionários</a>
+            </li>
+            @* li class="nav-item">
+                <a class="nav-link" href="#">Funcionários</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Vendas</a>
+            </li> *@
+        </ul>
+    </div>
+</nav>
 
-<h4>Produto</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">Criar Produto</h1>
+                    <hr />
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Nome" class="control-label">Nome</label>
+                            <input asp-for="Nome" class="form-control" />
+                            <span asp-validation-for="Nome" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Preco" class="control-label">Preço</label>
+                            <input asp-for="Preco" class="form-control" />
+                            <span asp-validation-for="Preco" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="quantidade" class="control-label">Quantidade</label>
+                            <input asp-for="quantidade" class="form-control" />
+                            <span asp-validation-for="quantidade" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="HoraCriacao" class="control-label">Hora de Criação</label>
+                            <input asp-for="HoraCriacao" class="form-control" />
+                            <span asp-validation-for="HoraCriacao" class="text-danger"></span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button type="submit" class="btn btn-primary">Criar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Preco" class="control-label"></label>
-                <input asp-for="Preco" class="form-control" />
-                <span asp-validation-for="Preco" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="quantidade" class="control-label"></label>
-                <input asp-for="quantidade" class="form-control" />
-                <span asp-validation-for="quantidade" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HoraCriacao" class="control-label"></label>
-                <input asp-for="HoraCriacao" class="form-control" />
-                <span asp-validation-for="HoraCriacao" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+
+<div class="text-center mt-4">
+    <a asp-action="Index" class="btn btn-secondary">Voltar para a Lista</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

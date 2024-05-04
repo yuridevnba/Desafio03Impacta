@@ -86,11 +86,11 @@ namespace ControleVendas.Migrations
                     b.Property<string>("Sexo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Telefone")
-                        .HasColumnType("int");
+                    b.Property<string>("Telefone")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TotalVendas")
-                        .HasColumnType("int");
+                    b.Property<decimal>("TotalVendas")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("FuncionarioId");
 
@@ -120,6 +120,31 @@ namespace ControleVendas.Migrations
                     b.HasKey("ProdutoID");
 
                     b.ToTable("Produto");
+                });
+
+            modelBuilder.Entity("ControleVendas.Models.Vendas", b =>
+                {
+                    b.Property<int>("VendasID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VendasID"));
+
+                    b.Property<int>("FuncionarioId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal?>("Preco")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("produtos")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("quantidade")
+                        .HasColumnType("int");
+
+                    b.HasKey("VendasID");
+
+                    b.ToTable("Vendas");
                 });
 #pragma warning restore 612, 618
         }

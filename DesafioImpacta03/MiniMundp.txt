@@ -1,0 +1,9 @@
+Num sistema de controle de estoque, os usuários são apresentados com um menu inicial onde devem escolher entre "Administrador" ou "Funcionário". Se optarem por ser administrador, serão solicitadas credenciais de acesso. Apenas com o email "adm@gmail.com" e a senha "123", é possível avançar para as próximas etapas. Uma vez autenticado, o administrador pode decidir entre cadastrar novos produtos ou funcionários.
+
+Para cadastrar produtos, o administrador precisa fornecer detalhes como nome, descrição e quantidade em estoque. Esses produtos serão armazenados no sistema para posterior gerenciamento. Já para cadastrar funcionários, é necessário informar CPF, nome e email. Esses funcionários serão autorizados a acessar o sistema mediante autenticação posterior.
+
+Por outro lado, se o usuário optar por ser funcionário, será solicitado que forneça CPF e email para autenticação. Apenas funcionários cadastrados pelo administrador poderão prosseguir para a próxima etapa. Após a autenticação bem-sucedida, o funcionário terá permissão para cadastrar vendas.
+
+Para cadastrar uma venda, o funcionário precisa selecionar um produto existente no banco de dados e especificar a quantidade vendida. Essa venda será vinculada ao ID do funcionário que realizou a transação, garantindo rastreabilidade e segurança no controle de estoque.
+
+Neste sistema, o administrador desempenha um papel crucial na gestão de produtos e funcionários, enquanto os funcionários têm a responsabilidade de registrar vendas e manter o estoque atualizado. Essa abordagem hierárquica garante uma operação eficiente e organizada do sistema de controle de estoque.
